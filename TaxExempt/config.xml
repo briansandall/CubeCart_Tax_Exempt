@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<installer version="1.0">
+  <info>
+	<uid>tax_exempt@linemansequipment.com</uid>
+	<type>plugins</type>
+	<mobile_optimized>true</mobile_optimized>
+	<name><![CDATA[Tax Exempt]]></name>
+	<description><![CDATA[Specify one or more customer groups to be exempt from tax.]]></description>
+	<version>1.0.0</version>
+	<minVersion>6.*.*</minVersion>
+	<maxVersion>6.*.*</maxVersion>
+	<creator><![CDATA[Brian Sandall]]></creator>
+	<homepage><![CDATA[https://linemansequipment.com]]></homepage>
+  </info>
+  <hooks>
+	<hook trigger="class.tax.producttax" enabled="1"><![CDATA[Tax Handler]]></hook>
+	<hook trigger="admin.customer.tabs" enabled="1"><![CDATA[Customer Settings]]></hook>
+  </hooks>
+</installer>

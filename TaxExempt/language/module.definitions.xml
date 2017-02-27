@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions version="1.0">
+	<group name="tax_exempt">
+		<string name="module_description"><![CDATA[Specify one or more customer groups to be exempt from tax.]]></string>
+		<string name="module_title"><![CDATA[Tax Exempt]]></string>
+		<string name="enabled_groups"><![CDATA[Allowed Customer Groups]]></string>
+		<string name="groups_add"><![CDATA[Add Group]]></string>
+		<string name="title_groups_enabled"><![CDATA[Enabled Customer Groups]]></string>
+		<string name="title_groups_add"><![CDATA[Add Customer Group]]></string>
+		<string name="title_customer_tab"><![CDATA[Tax Exempt Settings]]></string>
+		<string name="title_certificate_settings"><![CDATA[Tax Exempt Certificate Settings]]></string>
+		<string name="title_db_modifications"><![CDATA[Database Modifications]]></string>
+		<string name="title_db_table"><![CDATA[CubeCart Table]]></string>
+		<string name="title_db_column"><![CDATA[TaxExempt Column]]></string>
+		<string name="title_db_definition"><![CDATA[Column Definition]]></string>
+		<string name="title_db_notes"><![CDATA[Comment]]></string>
+		<string name="title_db_uninstall"><![CDATA[Uninstall]]></string>
+		<string name="expiration"><![CDATA[Certificate Expiration Date]]></string>
+		<string name="certificate_expired"><![CDATA[The tax exemption certificate we have on file has expired. If you have a current certificate, please send it to us and allow 1-2 business days for processing.]]></string>
+		<string name="certificate_expired_proceed"><![CDATA[You may continue to place this order but will be liable for the taxes as shown if we do not have a current certificate at the time the order is processed.]]></string>
+		<string name="db_error"><![CDATA[The Tax Exempt plugin detected incorrect table structure, perhaps due to a previous version or user modifications to the database. Please check that your store does not rely on the table columns listed in the module description before proceeding.]]></string>
+		<string name="db_error_instructions"><![CDATA[To continue installing, first check the 'Uninstall' box below and save to remove the old data columns, then re-enable this plugin.]]></string>
+		<string name="db_install"><![CDATA[The Tax Exempt plugin has installed successfully and made modifications to your database.]]></string>
+		<string name="db_uninstall"><![CDATA[The Tax Exempt plugin is now ready to uninstall.]]></string>
+		<string name="db_uninstall_instructions"><![CDATA[Check this box to disable the module and uninstall the database modifications listed below and any associated data.<br>&nbsp;&nbsp;&nbsp;If you uninstall the module from CubeCart without doing so, the modifications listed below and any data contained therein will remain in your database.]]></string>
+	</group>
+</definitions>

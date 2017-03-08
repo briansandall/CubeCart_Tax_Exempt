@@ -10,15 +10,17 @@ $module = new Module(__FILE__, $_GET['module'], 'admin/index.tpl', true, false);
 
 // Check `CubeCart_customer` table for compatibility; add column if missing
 if (!empty($_POST['tax_exempt_uninstall'])) {
-	foreach ($tax_exempt_db as $data) {
-		$table = $GLOBALS['db']->sqlSafe($GLOBALS['config']->get('config', 'dbprefix').$data['table']);
-		$GLOBALS['db']->misc("ALTER TABLE `$table` DROP COLUMN `$data[column]`");
+	if (!empty($module->_settings['db_install'])) {
+		foreach ($tax_exempt_db as $data) {
+			$table = $GLOBALS['db']->sqlSafe($GLOBALS['config']->get('config', 'dbprefix').$data['table']);
+			$GLOBALS['db']->misc("ALTER TABLE `$table` DROP COLUMN `$data[column]`");
+		}
+		$module->_settings['db_install'] = 0;
+		$GLOBALS['main']->setACPNotify($GLOBALS['language']->tax_exempt['db_uninstall']);
 	}
 	$module->_settings['status'] = 0;
-	$module->_settings['db_install'] = 0;
 	$module->module_settings_save($module->_settings);
 	$GLOBALS['smarty']->assign('MODULE', $module->_settings); // update smarty data
-	$GLOBALS['main']->setACPNotify($GLOBALS['language']->tax_exempt['db_uninstall']);
 } elseif (empty($module->_settings['db_install']) && !empty($_POST['module']['status'])) {
 	$error = false;
 	foreach ($tax_exempt_db as $key => $data) {
